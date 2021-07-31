@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState} from 'react';
 //import des cartes à partir de material-ui
 import {Card, CardActions, CardMedia, CardContent, Typography, IconButton} from '@material-ui/core';
 //import de l'icone 'cadie'
@@ -12,9 +12,13 @@ import useStyles from './styles';
 //voir les proprieétes de l'objet pour comprendre comment les appeler
 const Product = ({product, onAjout}) => {
     const classes = useStyles();
-    //Au lieu d'utiliser 'props' dans les parametres on utilise {product} pour eviter de faire 'props.product' 
+    //Au lieu d'utiliser 'props' dans les parametres on utilise {product} pour eviter de faire 'props.product'
+    
+    // const [anim,setAnim]= useState('');
+    
     return (
-        //Le produit est une carte
+        //Le produit est une carted
+        <div >
         <Card className={classes.root}>
             {/* zone image */}
             <CardMedia className={classes.media} image={product.media.source} title={product.name}/>
@@ -47,6 +51,7 @@ const Product = ({product, onAjout}) => {
                 </IconButton>
             </CardActions>
         </Card>
+        </div>
     );
 };
 

@@ -24,7 +24,7 @@ const Cart = ({ cart, updateQt, removefromCart, emptyCart }) => {
         <>
             <Grid container spacing={3}>
                 {cart.line_items.map((item) => (
-                    <Grid item xs={12} sm={4} key={item.id}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={item.id}>
                     {/* On fait un boucle sur tous les items en suite on les Passe en props pour pouvoir les utiliser ds CartItem.jsx
                     */}
                         {/* On passe le update et remove en props ici */}
@@ -38,7 +38,7 @@ const Cart = ({ cart, updateQt, removefromCart, emptyCart }) => {
                         Subtotal: {cart.subtotal.formatted_with_code}
                     </Typography>
                 </div>
-                <div>
+                <div className="boutonsbas">
                     <Button className={classes.emptyButton} size="large" type='button' variant='contained' color='secondary' onClick={emptyCart}>
                     Empty your Cart
                     </Button>

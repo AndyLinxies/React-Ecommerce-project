@@ -9,3 +9,33 @@
     border: solid gray 1px;
     padding-left: 5px;
 }
+.carte:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+} 
+/* Product */
+/* .rootProd {
+    max-width: '100%',
+}
+.nameDesProd {
+    display: 'block';
+}
+.DesProd {
+    margin-top: '15%';
+}
+
+.mediaProd {
+    height: 0;
+    padding-top: '56.25%'; 
+}
+.cardActionsProd {
+    display: 'flex';
+    justify-content: 'flex-end';
+}
+.cardContentProd {
+    display: 'flex';
+    justify-content: 'space-between';
+} */
+.boutonsbas{
+    margin-bottom: 5%;
+}
