@@ -1,0 +1,11 @@
+.search{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.myInput{
+    width:30%;
+    height: 5vh;
+    border: solid gray 1px;
+    padding-left: 5px;
+}
