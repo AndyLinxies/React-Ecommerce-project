@@ -9,7 +9,7 @@ import Products from './components/Products/Products';
 import Navbar from './components/Navbar/Navbar';
 import Cart from './components/Cart/Cart';
 //Checkout
-import Checkout from './components/Checkout/Checkout';
+import Checkout from './components/CheckoutForm/Checkout/Checkout';
 //Import du Router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -71,6 +71,7 @@ function App() {
   //Apres la creation du produit on voit un tableau d'objet representant le produit
   //Pour ajout des prodruits aller sur le site de commerce.js, onglet produits et ajouter les produits
 
+  //useEffect sert aussi re render notre appli a chaque fois que son deuxieme paramètre change (ici, un array vide). Ca sert à fetch automatiquement les produits dès qu'on en ajoute sur commercejs et a fetch aussi la cadie lorsqu'on clique pour y ajouter un produit
 
   useEffect(() => {
     fetchProducts();
@@ -99,7 +100,7 @@ function App() {
             cart={cart} />
           </Route>
           <Route exact path='/checkout'>
-            <Checkout/>
+            <Checkout cart={cart}/>
           </Route>
         </Switch>
       </div>

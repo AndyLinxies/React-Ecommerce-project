@@ -50,7 +50,7 @@ const Products = ({ products, onAjout }) => {
             </div>
             <Grid container justifyContent="center" spacing={4}>
                 {products.filter((product) => {
-                    if (searchTerm == '') {
+                    if (searchTerm === '') {
                         return product
                     } else if (product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                         return product
@@ -66,15 +66,4 @@ const Products = ({ products, onAjout }) => {
     );
 };
 
-// {/* Component venant de material-ui */}
-// <div>
-//     <Grid container justify="center" spacing={4}>
-//         {products.map(produit => {
-//             {/* xs=12 pour qu'il prennes tout l'espace dispo sur mobile, sm et lg pour tablette et grand ecran */ }
-//             <Grid item key = {produit.id} xs = {12} sm = {6} lg = {3} >
-//             {/* Le component Product sans S est appelé */ }
-//             <Product product = {products}/>
-//         })}
-//     </Grid>
-// </div>
 export default Products;

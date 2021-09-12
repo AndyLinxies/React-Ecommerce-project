@@ -17,7 +17,8 @@ const Product = ({product, onAjout}) => {
     // const [anim,setAnim]= useState('');
     
     return (
-        //Le produit est une carted
+        //Le produit est une carte
+        //Tout est une propriété d'un objet car tout a été crée sur le site commerce.js 
         <div >
         <Card className={classes.root}>
             {/* zone image */}
